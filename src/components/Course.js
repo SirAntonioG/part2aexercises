@@ -10,16 +10,16 @@ const TotalExercises = ({ parts }) => {
   );
 };
 
-const Course = ({ course }) => {
+const Course = ({course}) => {
   return (
-    <>
-      <h1>{course.name}</h1>
+    <div>
+      <h2>{course.name}</h2>
       {course.parts.map((part) => (
         <Part name={part.name} exercises={part.exercises} key={part.id} />
       ))}
       <TotalExercises parts={course.parts} />
-    </>
-  );
-};
+    </div>
+  )
+}
 
 export default Course;
